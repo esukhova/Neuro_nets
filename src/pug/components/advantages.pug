@@ -1,0 +1,41 @@
+-
+    var cards = [
+    {
+    icon: 'public/images/icons/goal.png',
+    title: 'Хотите открыть бизнес?',
+    text: 'Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером'
+    },
+    {
+    icon: 'public/images/icons/suitcase.png',
+    title: 'Мечтаете об отпуске?',
+    text: 'Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым'
+    },
+    {
+    icon: 'public/images/icons/check-list.png',
+    title: 'Вы студент и нуждаетесь в помощи в учебе?',
+    text: 'Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам'
+    },
+    {
+    icon: 'public/images/icons/mental-health.png',
+    title: 'Интересует здоровый образ жизни?',
+    text: 'Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.'
+    }
+    ]
+
+
+section.advantages#advantages
+    p.advantages__bg-word.bg-word Преимущества
+    .advantages__container.container
+        h3.advantages__title.title Преимущества курса
+        p.advantages__subtitle.subtitle.subtitle.subtitle
+            | Поможем создать
+            span  корректный промт
+            | , чтобы вы получили максимально корректный вариант под ваши нужды!
+
+        .advantages__cards-wrapper.cards-wrapper
+            each card in cards
+                .advantages__card.card
+                    .card__icon
+                        img(src=card.icon)
+                    .card__title #{card.title}
+                    .card__text #{card.text}

@@ -1,0 +1,94 @@
+@use "../variables" as *;
+
+.menu {
+  justify-self: end;
+  display: flex;
+  gap: 150px;
+  @media screen and (max-width: $layout-breakpoint-xl) {
+    gap: 36px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 105px;
+    @media screen and (max-width: $layout-breakpoint-xl) {
+      gap: 36px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white-color;
+    transition: all .3s;
+    font-size: 24px;
+    line-height: 1;
+    opacity: 0.6;
+
+
+    &:hover {
+      color: $dark-main-color;
+      opacity: 1;
+    }
+
+    &:active {
+      color: $main-color;
+      opacity: 1;
+    }
+
+    &:disabled {
+      opacity: 1;
+    }
+  }
+
+}
+
+@media screen and (max-width: $layout-breakpoint-md) {
+  .menu {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: -100%;
+    left: 0;
+    background: $bg-color;
+    transition: all .5s;
+    opacity: 0;
+    z-index: 200;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+    align-items: center;
+    padding: 93px 56px 30px;
+
+    &__list {
+      flex-direction: column;
+      text-align: center;
+      gap: 36px;
+    }
+
+    &__link {
+      font-size: 24px;
+      @media screen and (max-width: $layout-breakpoint-sm) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: $layout-breakpoint-xsm) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: $layout-breakpoint-xxsm) {
+        font-size: 14px;
+      }
+    }
+
+    &__btn {
+      min-width: 100%;
+    }
+
+    &.menu_open {
+      top: 0;
+      opacity: 1;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+    }
+  }
+}

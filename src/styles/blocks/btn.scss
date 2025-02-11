@@ -1,0 +1,73 @@
+@use "../variables" as *;
+
+.btn {
+  background-color:$dark-main-color;
+  padding: 19px 24px;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  font-size: 24px;
+  font-family: Evolventa, sans-serif;
+  font-weight: 400;
+  color: $white-color;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  line-height: 1;
+  @media screen and (max-width: $layout-breakpoint-lg) {
+    border-radius: 9px;
+    font-size: 20px;
+  }
+  @media screen and (max-width: $layout-breakpoint-sm) {
+    width: 100%;
+  }
+  @media screen and (max-width: $layout-breakpoint-xsm) {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  &:hover {
+    color: $bg-color;
+    background-color: $white-color;
+  }
+
+  &:active {
+    color: $bg-color;
+    background-color: $white-color;
+    box-shadow: 0 0 30px 2px $main-color;
+  }
+
+  &:disabled {
+    color: $bg-color;
+    background-color: $white-color;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &.btn_transparent {
+    font-size: 16px;
+    padding: 16px 22px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid $main-color;
+    color:$main-color;
+
+    &:hover {
+      color: $bg-color;
+      background-color: $dark-main-color;
+    }
+
+    &:active {
+      color: $bg-color;
+      background-color: $main-color;
+    }
+
+    &:disabled {
+      color: $bg-color;
+      background-color: $dark-main-color;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+}

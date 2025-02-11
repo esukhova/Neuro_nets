@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+.header {
+  padding: 25px 0;
+  @media screen and (max-width:$layout-breakpoint-md) {
+    padding: 12px 0;
+  }
+
+  &__container {
+    justify-content: start;
+    align-items: center;
+    @media screen and (max-width:$layout-breakpoint-md) {
+      padding: 0 15px;
+    }
+  }
+
+  &__logo {
+    background-size: cover;
+    display: flex;
+    width: 103px;
+    height: 48px;
+    background-image: url("../public/images/logo.png");
+    margin-right: auto;
+    z-index: 300;
+    @media screen and (max-width: $layout-breakpoint-md) {
+      width: 86px;
+      height: 40px;
+      background-image: url("../public/images/logo_small.png");
+    }
+    @media screen and (max-width: $layout-breakpoint-xsm) {
+      width: 59px;
+      height: 33px;
+      background: url("../public/images/logo_small.png");
+    }
+    a {
+      display: block;
+      flex-grow: 1;
+    }
+  }
+
+  &__menu {
+    justify-self: end;
+
+    &.menu_open .btn.btn_transparent.btn_getAccess {
+      color: $bg-color;
+      background-color: $dark-main-color;
+    }
+  }
+
+  &__actions {
+    width: 100%;
+  }
+}

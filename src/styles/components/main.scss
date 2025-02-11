@@ -1,0 +1,79 @@
+@use "../variables" as *;
+
+.main {
+  padding: 96px 0 48px;
+  @media screen and (max-width: $layout-breakpoint-xxl) {
+    padding: 48px 0;
+  }
+  @media screen and (max-width: $layout-breakpoint-sm) {
+    padding: 30px 0 38px;
+  }
+
+  &__container {
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $layout-breakpoint-md) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: 688px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: $layout-breakpoint-xl) {
+      max-width: 550px;
+    }
+    @media screen and (max-width: $layout-breakpoint-lg) {
+      max-width: 500px;
+    }
+    @media screen and (max-width: $layout-breakpoint-md) {
+      align-self: start;
+      order: 2;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media screen and (max-width: $layout-breakpoint-md) {
+      margin-bottom: 18px;
+      span {
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 72px;
+    @media screen and (max-width: $layout-breakpoint-xxl) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: $layout-breakpoint-md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image {
+    max-width: 619px;
+    @media screen and (max-width: $layout-breakpoint-md) {
+      order: 1;
+      max-width: 80%;
+    }
+    @media screen and (max-width: $layout-breakpoint-xsm) {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    @media screen and (max-width: $layout-breakpoint-md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.modal#modal
+    .modal__close-container#modal-close
+        .modal__close
+            img(src="public/images/icons/close.svg", alt="Закрыть")
+
+    h3.modal__title Овладей нейросетями!
+    p.modal__subtitle Получи в подарок доступ ко всем курсам
+    .modal__image
+        img(src="public/images/modal_image.webp")
+
+    form.modal__form.form(action="#")
+        .modal__inputs
+            input.modal__input#email(type="email", placeholder="Введите email")
+            span.modal__invalid-feedback.invalid-feedback Ошибка
+        button.modal__btn.btn#submit(type="button") Получить доступ

@@ -1,0 +1,42 @@
+@use "../variables" as *;
+
+input {
+  background: $bg-input-color;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  outline: none;
+  font-family: Evolventa, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  color: $white-color;
+  caret-color: $active-color;
+  transition: border 0.3s;
+
+  @media screen and (max-width: $layout-breakpoint-md) {
+    font-size: 16px;
+    padding: 9px;
+    border-radius: 9px;
+  }
+
+  &::placeholder {
+    color: $white-color;
+    opacity: 0.4;
+  }
+
+  &:hover, &:focus {
+    border: 1px solid $active-color;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  &.invalid {
+    border: 1px solid $main-color;
+    color: $main-color;
+  }
+}

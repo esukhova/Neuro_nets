@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <title>Нейросеть может всё!</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="public/images/main_image.webp" as="image">
+    <link rel="preload" href="public/images/modal_image.webp" as="image">
+    <link rel="icon" type="image/x-icon" href="public/images/icons/favicon.ico">
+    <script src="libs/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="blur"></div>
+    <div class="loader-bg visible">
+      <div class="loader"></div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal__close-container" id="modal-close">
+        <div class="modal__close"><img src="public/images/icons/close.svg" alt="Закрыть"></div>
+      </div>
+      <h3 class="modal__title">Овладей нейросетями!</h3>
+      <p class="modal__subtitle">Получи в подарок доступ ко всем курсам</p>
+      <div class="modal__image"><img src="public/images/modal_image.webp"></div>
+      <form class="modal__form form" action="#">
+        <div class="modal__inputs">
+          <input class="modal__input" id="email" type="email" placeholder="Введите email"><span class="modal__invalid-feedback invalid-feedback">Ошибка</span>
+        </div>
+        <button class="modal__btn btn" id="submit" type="button">Получить доступ</button>
+      </form>
+    </div>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__logo"><a href="#"></a></div>
+        <nav class="header__menu menu" id="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+            <li class="menu__item"><a class="menu__link" href="#advantages">Преимущества</a></li>
+          </ul>
+          <div class="header__actions">
+            <button class="header__btn btn btn_transparent btn_openModal">Получить доступ</button>
+          </div>
+        </nav>
+        <div class="burger-container" id="burger-container">
+          <div class="burger"></div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="main__container container">
+        <div class="main__info">
+          <h1 class="main__title title"><span class="gradient-text">Нейросеть</span>может всё!</h1>
+          <p class="main__subtitle subtitle">Мы уже живем в этой удивительной реальности</p>
+          <div class="main__actions">
+            <button class="main__btn btn btn_openModal">Погрузиться в новый мир</button>
+          </div>
+        </div>
+        <div class="main__image"><img src="public/images/main_image.webp" alt="Главная картинка"></div>
+      </div>
+    </section>
+    <section class="advantages" id="advantages">
+      <p class="advantages__bg-word bg-word">Преимущества</p>
+      <div class="advantages__container container">
+        <h3 class="advantages__title title">Преимущества курса</h3>
+        <p class="advantages__subtitle subtitle subtitle subtitle">Поможем создать<span> корректный промт</span>, чтобы вы получили максимально корректный вариант под ваши нужды!</p>
+        <div class="advantages__cards-wrapper cards-wrapper">
+          <div class="advantages__card card">
+            <div class="card__icon"><img src="public/images/icons/goal.png"></div>
+            <div class="card__title">Хотите открыть бизнес?</div>
+            <div class="card__text">Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером</div>
+          </div>
+          <div class="advantages__card card">
+            <div class="card__icon"><img src="public/images/icons/suitcase.png"></div>
+            <div class="card__title">Мечтаете об отпуске?</div>
+            <div class="card__text">Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым</div>
+          </div>
+          <div class="advantages__card card">
+            <div class="card__icon"><img src="public/images/icons/check-list.png"></div>
+            <div class="card__title">Вы студент и нуждаетесь в помощи в учебе?</div>
+            <div class="card__text">Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам</div>
+          </div>
+          <div class="advantages__card card">
+            <div class="card__icon"><img src="public/images/icons/mental-health.png"></div>
+            <div class="card__title">Интересует здоровый образ жизни?</div>
+            <div class="card__text">Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
